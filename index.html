@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rym Sara Messaoudi — AI Engineer & Data Scientist</title>
+  <meta name="description" content="Portfolio of Rym Sara Messaoudi — AI Engineer & Data Scientist specialised in LLMs, NLP, and full-stack AI platforms.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="page-home">
+
+  <!-- Custom cursor -->
+  <div class="cursor-dot"  id="cursor-dot"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- ── NAVBAR ──────────────────────────────────────────────────────────── -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-first">Rym Sara</span>
+        <span class="logo-last">Messaoudi</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html"      class="nav-link">Home</a></li>
+        <li><a href="about.html"      class="nav-link">About</a></li>
+        <li><a href="experience.html" class="nav-link">Experience</a></li>
+        <li><a href="projects.html"   class="nav-link">Projects</a></li>
+        <li><a href="skills.html"     class="nav-link">Skills</a></li>
+        <li><a href="contact.html"    class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button type="button" class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── HERO ────────────────────────────────────────────────────────────── -->
+  <section id="hero">
+    <div class="hero-particles" id="particles"></div>
+
+    <div class="hero-inner container">
+
+      <!-- Text -->
+      <div class="hero-text">
+        <p class="hero-sup">✦ &nbsp;AI Engineer &amp; Data Scientist</p>
+        <h1 class="hero-name">
+          <span class="name-first" id="hero-name-first">Rym Sara</span>
+          <span class="name-last"  id="hero-name-last">Messaoudi</span>
+        </h1>
+        <p class="hero-typing">
+          <span id="typed-text"></span><span class="type-cursor">|</span>
+        </p>
+        <p class="hero-desc" id="hero-desc"></p>
+        <div class="hero-ctas">
+          <a href="experience.html" class="btn btn-primary">
+            View My Work &nbsp;<i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="contact.html" class="btn btn-outline">
+            Get In Touch
+          </a>
+        </div>
+      </div>
+
+      <!-- Photo -->
+      <div class="hero-visual">
+        <div class="photo-rings">
+          <div class="ring r1"></div>
+          <div class="ring r2"></div>
+          <div class="ring r3"></div>
+        </div>
+        <div class="photo-wrap">
+          <img id="hero-photo" src="assets/img/profile.jpg" alt="Rym Sara Messaoudi">
+          <div class="photo-fallback" id="photo-fallback">RS</div>
+          <div class="photo-glow"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ── WHAT I DO ────────────────────────────────────────────────────────── -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-label">My Expertise</p>
+        <h2 class="section-title">What I <em>Do</em></h2>
+        <p class="section-sub">Combining engineering rigor with creative problem-solving to build the next generation of AI systems.</p>
+      </div>
+      <div class="what-grid" id="what-cards"></div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ────────────────────────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-name">Rym Sara Messaoudi</div>
+    <span class="footer-copy">© 2026 · AI Engineer & Data Scientist</span>
+    <div class="footer-links">
+      <a href="mailto:rym.sara.messaoudi@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/rym-sara-messaoudi-b8a558211" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/MessaoudiRym" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

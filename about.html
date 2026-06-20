@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Rym Sara Messaoudi</title>
+  <meta name="description" content="About Rym Sara Messaoudi — AI Engineer & Data Scientist from Oran, Algeria.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="page-about">
+
+  <div class="cursor-dot"  id="cursor-dot"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- ── NAVBAR ──────────────────────────────────────────────────────────── -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-first">Rym Sara</span>
+        <span class="logo-last">Messaoudi</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html"      class="nav-link">Home</a></li>
+        <li><a href="about.html"      class="nav-link">About</a></li>
+        <li><a href="experience.html" class="nav-link">Experience</a></li>
+        <li><a href="projects.html"   class="nav-link">Projects</a></li>
+        <li><a href="skills.html"     class="nav-link">Skills</a></li>
+        <li><a href="contact.html"    class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button type="button" class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── PAGE HEADER ──────────────────────────────────────────────────────── -->
+  <header class="page-hero">
+    <div class="container">
+      <p class="page-breadcrumb"><a href="index.html">Home</a> About</p>
+      <h1 class="page-title">About <em>Me</em></h1>
+    </div>
+  </header>
+
+  <!-- ── BIO ──────────────────────────────────────────────────────────────── -->
+  <section class="section">
+    <div class="container" style="max-width:820px">
+      <p class="section-label">Who I Am</p>
+      <blockquote class="bio-quote" id="bio-intro"></blockquote>
+      <p class="bio-text" id="bio-body"></p>
+      <div class="bio-values" id="bio-values"></div>
+    </div>
+  </section>
+
+  <!-- ── STATS ────────────────────────────────────────────────────────────── -->
+  <section class="section section-alt">
+    <div class="container">
+      <p class="section-label" style="justify-content:center;margin-bottom:2rem">In Numbers</p>
+      <div class="stats-row" id="stats-row"></div>
+    </div>
+  </section>
+
+  <!-- ── EDUCATION ────────────────────────────────────────────────────────── -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-label">Academic Background</p>
+        <h2 class="section-title">My <em>Education</em></h2>
+      </div>
+      <div class="edu-list" id="education-list"></div>
+    </div>
+  </section>
+
+  <!-- ── LANGUAGES ────────────────────────────────────────────────────────── -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-label">Communication</p>
+        <h2 class="section-title"><em>Languages</em></h2>
+      </div>
+      <div style="max-width:480px" id="languages-list"></div>
+    </div>
+  </section>
+
+  <!-- ── CTA ──────────────────────────────────────────────────────────────── -->
+  <section class="section">
+    <div class="container" style="text-align:center">
+      <p class="section-label" style="justify-content:center">Let's Work Together</p>
+      <h2 class="section-title" style="margin-bottom:1rem">Ready to build something <em>great</em>?</h2>
+      <p style="color:var(--muted);margin-bottom:2rem;font-size:1rem">I'm open to AI/ML roles, research collaborations, and exciting challenges.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+        <a href="experience.html" class="btn btn-outline">View Experience</a>
+        <a href="contact.html"    class="btn btn-primary">Contact Me &nbsp;<i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ────────────────────────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-name">Rym Sara Messaoudi</div>
+    <span class="footer-copy">© 2026 · AI Engineer & Data Scientist</span>
+    <div class="footer-links">
+      <a href="mailto:rym.sara.messaoudi@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/rym-sara-messaoudi-b8a558211" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/MessaoudiRym" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

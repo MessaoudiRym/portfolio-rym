@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Rym Sara Messaoudi</title>
+  <meta name="description" content="Get in touch with Rym Sara Messaoudi — AI Engineer & Data Scientist.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="page-contact">
+
+  <div class="cursor-dot"  id="cursor-dot"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- ── NAVBAR ──────────────────────────────────────────────────────────── -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-first">Rym Sara</span>
+        <span class="logo-last">Messaoudi</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html"      class="nav-link">Home</a></li>
+        <li><a href="about.html"      class="nav-link">About</a></li>
+        <li><a href="experience.html" class="nav-link">Experience</a></li>
+        <li><a href="projects.html"   class="nav-link">Projects</a></li>
+        <li><a href="skills.html"     class="nav-link">Skills</a></li>
+        <li><a href="contact.html"    class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button type="button" class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── PAGE HEADER ──────────────────────────────────────────────────────── -->
+  <header class="page-hero">
+    <div class="container">
+      <p class="page-breadcrumb"><a href="index.html">Home</a> Contact</p>
+      <h1 class="page-title">Get in <em>Touch</em></h1>
+    </div>
+  </header>
+
+  <!-- ── CONTACT ──────────────────────────────────────────────────────────── -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Left: info -->
+        <div>
+          <p class="section-label">Let's Connect</p>
+          <h2 class="section-title" style="margin-bottom:1.25rem">I'd love to <em>hear</em> from you</h2>
+          <p class="contact-intro">
+            Whether you have an exciting AI project, a job opportunity, or simply want to talk about the future of intelligent systems — I'm always open to a conversation.
+          </p>
+          <div class="contact-links" id="contact-links"></div>
+        </div>
+
+        <!-- Right: form -->
+        <div>
+          <p class="section-label" style="margin-bottom:1.5rem">Send a Message</p>
+          <!-- Using mailto action — opens email client with pre-filled content -->
+          <form class="contact-form" action="mailto:rym.sara.messaoudi@gmail.com" method="post" enctype="text/plain">
+            <div class="form-group">
+              <label for="f-name">Your Name</label>
+              <input type="text" id="f-name" name="name" placeholder="Jane Smith" required>
+            </div>
+            <div class="form-group">
+              <label for="f-email">Your Email</label>
+              <input type="email" id="f-email" name="email" placeholder="jane@company.com" required>
+            </div>
+            <div class="form-group">
+              <label for="f-subject">Subject</label>
+              <input type="text" id="f-subject" name="subject" placeholder="Job opportunity / Collaboration / ...">
+            </div>
+            <div class="form-group">
+              <label for="f-message">Message</label>
+              <textarea id="f-message" name="message" placeholder="Tell me about your project or opportunity..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">
+              Send Message &nbsp;<i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── AVAILABILITY BANNER ──────────────────────────────────────────────── -->
+  <section class="section section-alt">
+    <div class="container" style="text-align:center">
+      <div style="display:inline-flex;align-items:center;gap:0.6rem;background:rgba(240,165,191,0.08);border:1px solid rgba(240,165,191,0.2);padding:0.6rem 1.25rem;border-radius:50px;margin-bottom:1.5rem">
+        <span style="width:8px;height:8px;background:#4ade80;border-radius:50%;animation:blink 2s infinite"></span>
+        <span style="font-size:0.82rem;color:var(--muted)">Available for new opportunities</span>
+      </div>
+      <h2 class="section-title" style="margin-bottom:1rem">Open to AI/ML <em>Roles</em></h2>
+      <p style="color:var(--muted);max-width:500px;margin:0 auto;line-height:1.8;font-size:0.95rem">
+        Full-time positions, research collaborations, and consulting projects in AI Engineering, Data Science, and LLM development.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ────────────────────────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-name">Rym Sara Messaoudi</div>
+    <span class="footer-copy">© 2026 · AI Engineer & Data Scientist</span>
+    <div class="footer-links">
+      <a href="mailto:rym.sara.messaoudi@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/rym-sara-messaoudi-b8a558211" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/MessaoudiRym" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
