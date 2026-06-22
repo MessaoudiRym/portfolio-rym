@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body id="page-contact">
@@ -72,21 +72,21 @@
           <form class="contact-form" action="mailto:rym.sara.messaoudi@gmail.com" method="post" enctype="text/plain">
             <div class="form-group">
               <label for="f-name">Your Name</label>
-              <input type="text" id="f-name" name="name" placeholder="Jane Smith" required>
+              <input type="text" id="f-name" name="name" placeholder="Jane Smith" required maxlength="100" autocomplete="name">
             </div>
             <div class="form-group">
               <label for="f-email">Your Email</label>
-              <input type="email" id="f-email" name="email" placeholder="jane@company.com" required>
+              <input type="email" id="f-email" name="email" placeholder="jane@company.com" required maxlength="254" autocomplete="email">
             </div>
             <div class="form-group">
               <label for="f-subject">Subject</label>
-              <input type="text" id="f-subject" name="subject" placeholder="Job opportunity / Collaboration / ...">
+              <input type="text" id="f-subject" name="subject" placeholder="Job opportunity / Collaboration / ..." maxlength="200">
             </div>
             <div class="form-group">
               <label for="f-message">Message</label>
-              <textarea id="f-message" name="message" placeholder="Tell me about your project or opportunity..." required></textarea>
+              <textarea id="f-message" name="message" placeholder="Tell me about your project or opportunity..." required maxlength="2000"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">
+            <button type="submit" id="f-submit" class="btn btn-primary" style="width:100%;justify-content:center">
               Send Message &nbsp;<i class="fas fa-paper-plane"></i>
             </button>
           </form>
@@ -123,5 +123,60 @@
 
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    (function () {
+      const form = document.querySelector('.contact-form');
+      if (!form) return;
+
+      const emailRx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      form.addEventListener('submit', function (e) {
+        const nameEl    = document.getElementById('f-name');
+        const emailEl   = document.getElementById('f-email');
+        const subjectEl = document.getElementById('f-subject');
+        const msgEl     = document.getElementById('f-message');
+        const btn       = document.getElementById('f-submit');
+
+        // Trim whitespace — prevents empty-looking required fields from passing
+        nameEl.value    = nameEl.value.trim();
+        emailEl.value   = emailEl.value.trim();
+        subjectEl.value = subjectEl.value.trim();
+        msgEl.value     = msgEl.value.trim();
+
+        // Strip newlines from single-line fields (mailto header injection prevention)
+        nameEl.value    = nameEl.value.replace(/[\r\n]+/g, ' ');
+        subjectEl.value = subjectEl.value.replace(/[\r\n]+/g, ' ');
+
+        // Enforce maxlength as a hard guard (belt & suspenders)
+        if (nameEl.value.length > 100)    { nameEl.value    = nameEl.value.slice(0, 100); }
+        if (subjectEl.value.length > 200) { subjectEl.value = subjectEl.value.slice(0, 200); }
+        if (msgEl.value.length > 2000)    { msgEl.value     = msgEl.value.slice(0, 2000); }
+
+        // Stricter email format check (browser type="email" is permissive)
+        if (!emailRx.test(emailEl.value)) {
+          e.preventDefault();
+          emailEl.setCustomValidity('Please enter a valid email address.');
+          emailEl.reportValidity();
+          return;
+        }
+        emailEl.setCustomValidity('');
+
+        // Disable button to prevent accidental double-submit
+        if (btn) {
+          btn.disabled = true;
+          btn.innerHTML = 'Opening email client… <i class="fas fa-spinner fa-spin"></i>';
+          setTimeout(function () {
+            btn.disabled = false;
+            btn.innerHTML = 'Send Message &nbsp;<i class="fas fa-paper-plane"></i>';
+          }, 4000);
+        }
+      });
+
+      // Clear custom validity as the user types
+      document.getElementById('f-email').addEventListener('input', function () {
+        this.setCustomValidity('');
+      });
+    })();
+  </script>
 </body>
 </html>

@@ -26,11 +26,10 @@ const DATA = {
   },
 
   about: {
-    intro: "I am a Telecommunications Engineer specialised in Artificial Intelligence and Data Science, graduated from ENSTTIC (Oran). What drives me is the art of transforming raw, messy data into systems that are truly intelligent — systems that understand language, reason about risk, and deliver value in the real world.",
-    body: "My journey bridges two worlds: the rigorous infrastructure of telecommunications engineering and the cutting edge of modern AI. I've deployed LLM agents for email automation, built real-time Twitter sentiment dashboards on Kafka & Spark, architected a full AI-powered recruitment platform with voice interviews and intelligent CV screening, and developed medical inventory systems from the ground up.\n\nCurrently at Belogic AI (Brussels), I work at the intersection of LLMs, real-time voice technology (WebRTC / LiveKit), and large-scale async processing. I bring both the depth of a researcher and the pragmatism of an engineer who ships.",
+    intro: "I am a Telecommunications Engineer specialised in Artificial Intelligence and Data Science, graduated from the National Higher School of Telecommunications and ICT - ENSTTIC (Oran, Algeria). What drives me is the art of transforming raw, messy data into systems that are truly intelligent — systems that understand language, reason about risk, and deliver value in the real world.",
+    body: "My journey bridges two worlds: the rigorous infrastructure of telecommunications engineering and the cutting edge of modern AI. I've deployed LLM agents for email automation, built real-time Twitter sentiment dashboards on Kafka & Spark, architected a AI-powered recruitment platform with voice interviews and intelligent CV screening, and developed medical inventory systems from the ground up.\n\nCurrently at Belogic AI (Brussels), I work at the intersection of LLMs, real-time voice technology, and large-scale async processing.",
     values: [
       { icon: "✦", label: "Engineering Rigor", desc: "I build systems that are robust, scalable, and production-ready." },
-      { icon: "✦", label: "AI-First Thinking", desc: "Every problem I approach, I ask: how can intelligence make this better?" },
       { icon: "✦", label: "End-to-End Ownership", desc: "From ideation to deployment, I own the full stack." }
     ]
   },
@@ -53,7 +52,7 @@ const DATA = {
       icon: "◈",
       color: "gold",
       title: "Data Science & NLP",
-      desc: "End-to-end data pipelines, sentiment analysis, real-time stream processing with Kafka & Spark, and statistical modelling on complex datasets."
+      desc: "End-to-end data pipelines, sentiment analysis, real-time stream processing, and statistical modelling on complex datasets."
     },
     {
       icon: "◇",
@@ -144,7 +143,7 @@ const DATA = {
   projects: [
     {
       id:        "crypto-risk",
-      icon:      "₿",
+      icon:      "fas fa-chart-line",
       accent:    "rose",
       category:  "AI / LLM",
       featured:  true,
@@ -163,27 +162,27 @@ const DATA = {
     },
     {
       id:        "belogic-recruitment",
-      icon:      "🎙️",
+      icon:      "fas fa-users",
       accent:    "lavender",
       category:  "AI / LLM",
       featured:  false,
       title:     "AI-Powered Recruitment Platform",
       shortDesc: "End-to-end AI recruitment platform with real-time voice interviews, automated scoring, and intelligent CV screening — built professionally at Belogic AI.",
-      fullDesc:  "Designed and developed end-to-end at Belogic AI (Brussels), this platform reimagines the recruitment process by embedding AI at every stage.\n\nCandidates go through a fully automated voice interview conducted by an AI agent in real time — built on WebRTC and LiveKit for low-latency audio streaming. STT (Deepgram) transcribes responses on the fly; an LLM then scores each answer against job-specific rubrics.\n\nOn the HR side, an intelligent CV screening module extracts structured candidate data, matches profiles to job requirements, and ranks applicants automatically. All asynchronous processing (CV parsing, scoring, notifications) runs through Celery workers on Redis. The entire stack is containerised with Docker and monitored via Langfuse for LLM observability.",
+      fullDesc:  "Designed and developed end-to-end at Belogic AI (Brussels), this platform reimagines the recruitment process by embedding AI at every stage.\n\nCandidates go through a fully automated voice interview conducted by an AI agent in real time — with low-latency audio streaming, live transcription, and automated scoring of each response against job-specific rubrics.\n\nOn the HR side, an intelligent CV screening module extracts structured candidate data, matches profiles to job requirements, and ranks applicants automatically. Asynchronous processing handles CV parsing, scoring, and notifications at scale.",
       highlights: [
         "Designed and built the full-stack AI recruitment platform from scratch",
-        "Built a real-time AI voice interview agent with WebRTC / LiveKit and automated scoring",
-        "Integrated STT (Deepgram) and LLMs for live response transcription and evaluation",
+        "Built a real-time AI voice interview agent with automated answer scoring",
+        "Integrated live speech transcription and LLM-based evaluation of candidate responses",
         "Implemented intelligent CV screening — structured extraction, matching and ranking",
-        "Developed async data pipelines with Celery and Redis at scale",
-        "Containerised deployment with Docker; LLM monitoring via Langfuse"
+        "Developed asynchronous data pipelines for processing at scale",
+        "Containerised deployment with full LLM observability monitoring"
       ],
       tags:    ["Python", "TypeScript", "Next.js", "React", "FastAPI", "PostgreSQL", "Docker", "Redis", "Celery", "WebRTC", "LiveKit", "LangChain", "OpenAI API", "Deepgram", "Langfuse"],
       context: "Professional — Belogic AI, Brussels · Nov 2025–Present"
     },
     {
       id:        "email-agent",
-      icon:      "✉️",
+      icon:      "fas fa-inbox",
       accent:    "lavender",
       category:  "AI / LLM",
       featured:  true,
@@ -201,7 +200,7 @@ const DATA = {
     },
     {
       id:        "twitter-sentiment",
-      icon:      "📡",
+      icon:      "fas fa-comments",
       accent:    "gold",
       category:  "Big Data",
       featured:  false,
@@ -220,7 +219,7 @@ const DATA = {
     },
     {
       id:        "stock-management",
-      icon:      "🏥",
+      icon:      "fas fa-warehouse",
       accent:    "lavender",
       category:  "Web Dev",
       featured:  false,
@@ -235,23 +234,23 @@ const DATA = {
         "Deployed internally for daily use at the laboratory"
       ],
       tags:    ["Laravel", "Inertia.js", "React", "PHP", "HTML", "CSS", "MySQL"],
-      context: "Professional Project — Dr. C.F. BELARBI Lab · Oct 2025–Present"
+      context: "Professional Project — Dr. C.F. BELARBI Lab · Oct–Nov 2025"
     },
     {
       id:        "rest-api",
-      icon:      "⚡",
+      icon:      "fas fa-plug",
       accent:    "gold",
       category:  "Web Dev",
       featured:  false,
-      title:     "REST API Platform",
-      shortDesc: "Token-based authentication, infrastructure resource management, Swagger integration, and a React frontend consuming a hosted API.",
-      fullDesc:  "A complete REST API platform built with Python Flask, demonstrating secure API design and full-stack integration.\n\nThe backend implements JWT token-based authentication, with endpoints for managing infrastructure resources. The API is documented with Swagger UI, making it easy to explore and test. It is deployed and exposed publicly using ngrok for easy access during development and demo.\n\nA React frontend was built to consume the API, providing a clean and responsive interface for interacting with the platform's features, including integrating with additional hosted external APIs.",
+      title:     "Multi-Cloud Infrastructure Management API",
+      shortDesc: "Centralized REST API for managing multi-cloud infrastructure — cloud providers, virtual machines, and resources — behind token-based authentication.",
+      fullDesc:  "A centralized REST API built with Flask and SQLite for managing cloud infrastructure resources across multiple providers.\n\nAfter authenticating via a token-based system, users can perform full CRUD operations on cloud providers registered in the system — adding, updating, removing and querying them. For each registered provider, the API exposes a dedicated layer to manage the associated virtual machines with the same set of operations.\n\nThe result is a unified interface that abstracts multi-cloud complexity, allowing administrators to manage all their infrastructure resources from a single API regardless of the underlying cloud provider. The API is documented with Swagger UI, deployed and exposed via ngrok, and complemented by a React frontend.",
       highlights: [
-        "Implemented JWT token-based authentication system",
-        "Managed infrastructure resources via a structured REST API",
-        "Integrated Swagger UI for interactive API documentation and testing",
-        "Deployed and exposed the backend with ngrok",
-        "Built a React frontend consuming the hosted API"
+        "Designed a centralized API abstracting multi-cloud provider management",
+        "Implemented full CRUD endpoints for cloud providers and their virtual machines",
+        "Secured all operations with token-based authentication",
+        "Documented the API with Swagger UI for interactive exploration and testing",
+        "Built a React frontend consuming the API and deployed the backend via ngrok"
       ],
       tags:    ["Python Flask", "SQLite", "React", "JWT", "Swagger", "ngrok", "HTML", "CSS"],
       context: "Academic Project — ENSTTIC",
@@ -259,7 +258,7 @@ const DATA = {
     },
     {
       id:        "medical-graph",
-      icon:      "🔬",
+      icon:      "fas fa-share-nodes",
       accent:    "rose",
       category:  "Web Dev",
       featured:  false,
@@ -278,7 +277,7 @@ const DATA = {
     },
     {
       id:        "xo-game",
-      icon:      "🎮",
+      icon:      "fas fa-gamepad",
       accent:    "gold",
       category:  "Dev",
       featured:  false,
@@ -340,10 +339,10 @@ const DATA = {
   ],
 
   languages: [
-    { lang: "Arabic",  level: "Native", pct: 100 },
-    { lang: "French",  level: "C2",     pct: 96  },
-    { lang: "English", level: "C1",     pct: 85  },
-    { lang: "Spanish", level: "B2",     pct: 70  }
+    { lang: "Arabic",  level: "Native", flag: "🇩🇿" },
+    { lang: "French",  level: "C2",     flag: "🇫🇷" },
+    { lang: "English", level: "C1",     flag: "🇬🇧" },
+    { lang: "Spanish", level: "B2",     flag: "🇪🇸" }
   ],
 
   interests: [

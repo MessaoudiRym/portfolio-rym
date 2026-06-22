@@ -202,7 +202,7 @@ function renderHomeFeaturedProjects() {
   const featured = DATA.projects.filter(p => p.featured);
   el.innerHTML = featured.map(p => `
     <div class="proj-card accent-${p.accent} reveal">
-      <div class="proj-icon">${p.icon}</div>
+      <div class="proj-icon"><i class="${p.icon}"></i></div>
       <h3 class="proj-title">${p.title}</h3>
       <p class="proj-desc">${p.shortDesc}</p>
       <div class="tags">${p.tags.slice(0, 4).map(t => `<span class="tag">${t}</span>`).join('')}</div>
@@ -259,17 +259,24 @@ function initAbout() {
   // Languages
   const langs = document.getElementById('languages-list');
   if (langs) {
-    langs.innerHTML = DATA.languages.map(l => `
-      <div class="lang-item">
-        <div class="lang-header">
-          <span class="lang-name">${l.lang}</span>
-          <span class="lang-level">${l.level}</span>
-        </div>
-        <div class="lang-bar">
-          <div class="lang-fill" data-pct="${l.pct}" style="width:0%"></div>
-        </div>
-      </div>
-    `).join('');
+    const levelPct   = { 'Native': 100, 'C2': 95, 'C1': 82, 'B2': 68 };
+    const levelColor = { 'Native': 'var(--primary)', 'C2': 'var(--primary)', 'C1': 'var(--lavender)', 'B2': 'var(--gold)' };
+    const levelClass = { 'Native': 'rose', 'C2': 'rose', 'C1': 'lavender', 'B2': 'gold' };
+    langs.innerHTML = `<div class="lang-rings">${DATA.languages.map(l => {
+      const pct   = levelPct[l.level]   || 70;
+      const color = levelColor[l.level] || 'var(--primary)';
+      const cls   = levelClass[l.level] || 'rose';
+      return `
+        <div class="lang-ring-item reveal">
+          <div class="lang-ring" style="background: conic-gradient(${color} ${pct}%, var(--lang-track) 0%)">
+            <div class="lang-ring-inner">
+              <span class="lang-ring-flag">${l.flag}</span>
+            </div>
+          </div>
+          <div class="lang-ring-name">${l.lang}</div>
+          <span class="lang-ring-badge ${cls}">${l.level}</span>
+        </div>`;
+    }).join('')}</div>`;
   }
 
   // Education (moved from skills page)
@@ -329,7 +336,7 @@ function initExperience() {
     const featured = DATA.projects.filter(p => p.featured);
     proj.innerHTML = featured.map(p => `
       <div class="proj-card accent-${p.accent} reveal">
-        <div class="proj-icon">${p.icon}</div>
+        <div class="proj-icon"><i class="${p.icon}"></i></div>
         <h3 class="proj-title">${p.title}</h3>
         <p class="proj-desc">${p.shortDesc}</p>
         <div class="tags">${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
@@ -561,7 +568,7 @@ function initProjects() {
     grid.innerHTML = list.map(p => `
       <div class="proj-full-card accent-${p.accent} reveal" data-id="${p.id}" data-cat="${p.category}">
         <div class="proj-card-header">
-          <span class="proj-card-emoji">${p.icon}</span>
+          <span class="proj-card-emoji"><i class="${p.icon}"></i></span>
           <span class="proj-cat-badge ${p.accent}">${p.category}</span>
         </div>
         <h3 class="proj-card-title">${p.title}</h3>
@@ -609,7 +616,9 @@ function initProjects() {
     const p = DATA.projects.find(x => x.id === id);
     if (!p) return;
 
-    document.getElementById('modal-emoji').textContent  = p.icon;
+    const emojiEl = document.getElementById('modal-emoji');
+    emojiEl.innerHTML = `<i class="${p.icon}"></i>`;
+    emojiEl.className = `modal-emoji accent-${p.accent}`;
     document.getElementById('modal-cat').textContent    = p.category;
     document.getElementById('modal-title').textContent  = p.title;
     document.getElementById('modal-desc').textContent   = p.fullDesc;

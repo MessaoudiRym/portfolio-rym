@@ -755,14 +755,74 @@ button { font-family: inherit; }
   margin-top: 0.25rem;
 }
 
-/* Languages */
-.lang-item    { margin-bottom: 1.5rem; }
-.lang-header  { display: flex; justify-content: space-between; margin-bottom: 0.5rem; }
-.lang-name    { font-weight: 600; font-size: 0.95rem; }
-.lang-level   { font-size: 0.8rem; color: var(--primary); font-weight: 600; letter-spacing: 0.05em; }
-.lang-bar     { height: 4px; background: rgba(240,165,191,0.12); border-radius: 2px; overflow: hidden; }
-[data-theme="light"] .lang-bar { background: rgba(192,73,110,0.1); }
-.lang-fill    { height: 100%; background: var(--grad); border-radius: 2px; transition: width 1.4s cubic-bezier(0.4,0,0.2,1); }
+/* Languages — circular rings */
+:root { --lang-track: rgba(240,165,191,0.1); }
+[data-theme="light"] { --lang-track: rgba(192,73,110,0.08); }
+
+.lang-rings {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  justify-content: flex-start;
+}
+.lang-ring-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+}
+.lang-ring {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+}
+.lang-ring-item:hover .lang-ring { transform: scale(1.06); }
+.lang-ring-inner {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+[data-theme="light"] .lang-ring-inner { background: #fff9fa; }
+.lang-ring-flag { font-size: 1.65rem; line-height: 1; }
+.lang-ring-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.lang-ring-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.2rem 0.65rem;
+  border-radius: 20px;
+}
+.lang-ring-badge.rose     { background: rgba(240,165,191,0.14); color: var(--primary);  }
+.lang-ring-badge.lavender { background: rgba(192,132,212,0.14); color: var(--lavender); }
+.lang-ring-badge.gold     { background: rgba(212,175,122,0.14); color: var(--gold);     }
+
+/* Tablet → 2×2 */
+@media (max-width: 700px) {
+  .lang-rings { flex-wrap: wrap; gap: 1.75rem 2rem; }
+  .lang-ring-item { width: calc(50% - 1rem); align-items: center; }
+}
+/* Mobile → 2×2 plus compact */
+@media (max-width: 420px) {
+  .lang-rings { gap: 1.25rem; }
+  .lang-ring { width: 80px; height: 80px; }
+  .lang-ring-inner { width: 58px; height: 58px; }
+  .lang-ring-flag { font-size: 1.4rem; }
+  .lang-ring-item { width: calc(50% - 0.625rem); }
+}
 
 /* Interests */
 .interests-flex { display: flex; flex-wrap: wrap; gap: 0.75rem; }
@@ -897,6 +957,10 @@ button { font-family: inherit; }
 .proj-card:hover.accent-gold         { border-color: rgba(212,175,122,0.35); }
 .proj-card:hover.accent-lavender     { border-color: rgba(192,132,212,0.35); }
 .proj-icon  { font-size: 2.2rem; line-height: 1; }
+.proj-icon i, .proj-card-emoji i { font-size: inherit; }
+.accent-rose     .proj-icon i, .accent-rose     .proj-card-emoji i { color: var(--primary); }
+.accent-gold     .proj-icon i, .accent-gold     .proj-card-emoji i { color: var(--gold); }
+.accent-lavender .proj-icon i, .accent-lavender .proj-card-emoji i { color: var(--lavender); }
 .proj-title { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 600; }
 .proj-desc  { font-size: 0.875rem; color: var(--muted); line-height: 1.75; flex: 1; }
 
