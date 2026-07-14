@@ -67,7 +67,7 @@ const DATA = {
       title:    "AI Engineer",
       company:  "Belogic AI",
       location: "Brussels, Belgium",
-      period:   "Nov 2025 – Present",
+      period:   "Nov 2025 – July 2026",
       type:     "ai",
       points: [
         "Designed and developed an AI-powered recruitment platform end-to-end",
@@ -83,7 +83,7 @@ const DATA = {
       title:    "Network & Monitoring Engineer",
       company:  "Dr. C.F. BELARBI Medical Analysis Laboratory",
       location: "Oran, Algeria",
-      period:   "Oct 2025 – Present",
+      period:   "Oct 2025 – Nov 2025",
       type:     "dev",
       points: [
         "Managed and maintained network infrastructure ensuring high availability",
@@ -178,7 +178,7 @@ const DATA = {
         "Containerised deployment with full LLM observability monitoring"
       ],
       tags:    ["Python", "TypeScript", "Next.js", "React", "FastAPI", "PostgreSQL", "Docker", "Redis", "Celery", "WebRTC", "LiveKit", "LangChain", "OpenAI API", "Deepgram", "Langfuse"],
-      context: "Professional — Belogic AI, Brussels · Nov 2025–Present"
+      context: "Professional — Belogic AI, Brussels · Nov 2025–July 2026"
     },
     {
       id:        "email-agent",
