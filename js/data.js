@@ -27,7 +27,7 @@ const DATA = {
 
   about: {
     intro: "I am a Telecommunications Engineer specialised in Artificial Intelligence and Data Science, graduated from the National Higher School of Telecommunications and ICT - ENSTTIC (Oran, Algeria). What drives me is the art of transforming raw, messy data into systems that are truly intelligent — systems that understand language, reason about risk, and deliver value in the real world.",
-    body: "My journey bridges two worlds: the rigorous infrastructure of telecommunications engineering and the cutting edge of modern AI. I've deployed LLM agents for email automation, built real-time Twitter sentiment dashboards on Kafka & Spark, architected a AI-powered recruitment platform with voice interviews and intelligent CV screening, and developed medical inventory systems from the ground up.\n\nCurrently at Belogic AI (Brussels), I work at the intersection of LLMs, real-time voice technology, and large-scale async processing.",
+    body: "My journey bridges two worlds: the rigorous infrastructure of telecommunications engineering and the cutting edge of modern AI. I've deployed LLM agents for email automation, built real-time Twitter sentiment dashboards on Kafka & Spark, architected a AI-powered recruitment platform with voice interviews and intelligent CV screening, and developed medical inventory systems from the ground up.\n\nAt Belogic AI (Brussels), I worked at the intersection of LLMs, real-time voice technology, and large-scale async processing. In 2026 I joined Cohort 1 of the ThirdUni applied AI program, funded by the U.S. Department of State, where I built MedRadar. I am currently a Full-Stack Developer & Data Scientist at the Dr. C.F. BELARBI Medical Analysis Laboratory.",
     values: [
       { icon: "✦", label: "Engineering Rigor", desc: "I build systems that are robust, scalable, and production-ready." },
       { icon: "✦", label: "End-to-End Ownership", desc: "From ideation to deployment, I own the full stack." }
@@ -37,7 +37,7 @@ const DATA = {
   stats: [
     { number: "5",  label: "Years of Study"   },
     { number: "5",  label: "Internships"      },
-    { number: "7+", label: "Projects Built"   },
+    { number: "10", label: "Projects Built"   },
     { number: "4",  label: "Languages Spoken" }
   ],
 
@@ -64,9 +64,38 @@ const DATA = {
 
   experience: [
     {
-      title:    "AI Engineer",
+      title:    "Full-Stack Developer & Data Scientist",
+      company:  "Dr. C.F. BELARBI Medical Analysis Laboratory",
+      location: "Oran, Algeria",
+      period:   "Oct 2026 – Present",
+      type:     "dev",
+      points: [
+        "Analysed business needs and existing processes to design a laboratory management solution",
+        "Performed functional analysis and contributed to the design of an integrated application for patients, medical analyses and billing",
+        "Explored, processed and structured medical and administrative data",
+        "Carried out statistical analyses and defined key performance indicators (KPIs)",
+        "Designed interactive dashboards and analytical reports for activity monitoring and decision-making"
+      ],
+      tags: ["Full-Stack", "Data Analysis", "KPIs", "Dashboards", "Statistics"]
+    },
+    {
+      title:    "Participant — ThirdUni Program (Cohort 1)",
+      company:  "ThirdUni · Funded by the U.S. Department of State",
+      location: "Online",
+      period:   "Sept – Oct 2026",
+      type:     "ai",
+      points: [
+        "4 weeks of intensive applied AI courses: LLMs, prompt engineering, AI-agent-assisted development (Claude Code, Cursor, Codex)",
+        "Built AI agents: tools, memory, MCP, multi-agent systems and RAG",
+        "Product design (problem, user, MVP), pitching and storytelling, application security (STRIDE, OWASP)",
+        "4-week individual project evaluated by a U.S. Embassy jury: MedRadar"
+      ],
+      tags: ["LLM", "AI Agents", "MCP", "RAG", "Multi-Agent", "Prompt Engineering", "Claude Code", "Cursor", "STRIDE", "OWASP"]
+    },
+    {
+      title:    "AI Engineer / Data Scientist",
       company:  "Belogic AI",
-      location: "Brussels, Belgium",
+      location: "Brussels, Belgium · Remote",
       period:   "Nov 2025 – July 2026",
       type:     "ai",
       points: [
@@ -83,7 +112,7 @@ const DATA = {
       title:    "Network & Monitoring Engineer",
       company:  "Dr. C.F. BELARBI Medical Analysis Laboratory",
       location: "Oran, Algeria",
-      period:   "Oct 2025 – Nov 2025",
+      period:   "Oct 2025 – Dec 2025",
       type:     "dev",
       points: [
         "Managed and maintained network infrastructure ensuring high availability",
@@ -141,6 +170,28 @@ const DATA = {
   // category: shown as badge on the projects page
   // featured: true → shown on the homepage highlights
   projects: [
+    {
+      id:        "medradar",
+      icon:      "fas fa-pills",
+      accent:    "rose",
+      category:  "AI / LLM",
+      featured:  true,
+      title:     "MedRadar — Out-of-Stock Medicine Finder",
+      shortDesc: "Find an out-of-stock medicine in Algeria: registered equivalents and nearby pharmacies, with multilingual AI search and photo recognition.",
+      fullDesc:  "MedRadar was my individual project for the ThirdUni program (Cohort 1), evaluated by a jury from the U.S. Embassy and an Algerian company.\n\nIt started with field research among pharmacists and patients to identify the real need and define the MVP. I then cleaned and structured the official national drug nomenclature and defined reliable equivalence rules, so that patients facing a shortage can find registered equivalents.\n\nThe backend is a secure REST API (FastAPI, PostgreSQL) with JWT authentication, role management and a verified pharmacist space for stock management. Generative AI powers search in French, Arabic and Darija, medicine box recognition from a photo, and reading of delivery notes — always with human validation. The Next.js frontend includes an interactive map of pharmacies (Leaflet).\n\nThe project is covered by 250+ automated tests, deployed on Render and Vercel, with checks automated through GitHub Actions.",
+      highlights: [
+        "Conducted field research with pharmacists and patients to define the MVP",
+        "Cleaned and structured the official national drug nomenclature and defined reliable equivalence rules",
+        "Built a secure REST API with FastAPI and PostgreSQL: JWT authentication, roles, verified pharmacist space for stock management",
+        "Integrated generative AI for search in French, Arabic and Darija, box recognition by photo and delivery-note reading — with human validation",
+        "Developed the Next.js web interface with an interactive pharmacy map (Leaflet)",
+        "Wrote 250+ automated tests (pytest, Playwright), deployed on Render and Vercel, CI with GitHub Actions",
+        "Pitched the project in English to a jury (U.S. Embassy and an Algerian company)"
+      ],
+      tags:    ["Python", "FastAPI", "SQLAlchemy", "PostgreSQL", "Next.js", "Tailwind CSS", "Leaflet", "Google Gemini API", "pytest", "Playwright", "GitHub Actions", "Render", "Vercel"],
+      context: "ThirdUni Program — Cohort 1 · Sept–Oct 2026",
+      github:  "https://github.com/MessaoudiRym/MedRadar"
+    },
     {
       id:        "crypto-risk",
       icon:      "fas fa-chart-line",
@@ -234,7 +285,7 @@ const DATA = {
         "Deployed internally for daily use at the laboratory"
       ],
       tags:    ["Laravel", "Inertia.js", "React", "PHP", "HTML", "CSS", "MySQL"],
-      context: "Professional Project — Dr. C.F. BELARBI Lab · Oct–Nov 2025"
+      context: "Professional Project — Dr. C.F. BELARBI Lab · Oct–Dec 2025"
     },
     {
       id:        "rest-api",
@@ -292,18 +343,40 @@ const DATA = {
       ],
       tags:    ["Java", "Sockets", "Multithreading", "TCP/IP", "Real-Time"],
       context: "Academic Project — ENSTTIC"
+    },
+    {
+      id:        "carigo",
+      icon:      "fas fa-car",
+      accent:    "lavender",
+      category:  "Entrepreneurship",
+      featured:  false,
+      title:     "CarIGo — Car Rental Centralisation Start-up",
+      shortDesc: "Start-up platform centralising car rental agencies: online booking for customers and management software for agencies. Selected at IDEATOR and incubated for 7 months at ANPT.",
+      fullDesc:  "CarIGo is a start-up project aiming to centralise car rental agencies on a single platform: customers can book online, while agencies get dedicated management software.\n\nThe project was selected at the IDEATOR start-up competition (Oran) after a pitch in front of a jury of experts, then incubated for 7 months at the ANPT.\n\nI carried out the market study (customer surveys, agency testimonials), the competitive analysis and SWOT, the Business Model Canvas, a presentation article, the go-to-market plan and the application mock-ups in Figma.",
+      highlights: [
+        "Selected at the IDEATOR start-up competition after a pitch to a jury of experts",
+        "Incubated for 7 months at the ANPT",
+        "Conducted the market study: customer surveys and agency testimonials",
+        "Built the competitive analysis, SWOT and Business Model Canvas",
+        "Wrote the presentation article and the go-to-market plan",
+        "Designed the application mock-ups in Figma"
+      ],
+      tags:    ["Entrepreneurship", "Market Research", "SWOT", "Business Model Canvas", "Pitching", "Figma"],
+      context: "IDEATOR Competition — Oran, 2024"
     }
   ],
 
   skills: [
     { category: "Python & ML Libraries",      items: ["NumPy", "Pandas", "Matplotlib", "Seaborn", "Scikit-learn", "TensorFlow", "Keras", "PyTorch", "NLTK", "LangChain", "Streamlit"] },
     { category: "Machine Learning",            items: ["Supervised Learning", "Regression", "Classification", "Clustering", "Dimensionality Reduction", "Model Evaluation", "Feature Engineering"] },
-    { category: "Deep Learning & GenAI",       items: ["ANN", "RNN", "LSTM", "Transformers", "LLMs", "RAG", "Semantic Search", "Prompt Engineering", "FAISS"] },
-    { category: "NLP & Data Analysis",         items: ["Sentiment Analysis", "Text Classification", "EDA", "Data Wrangling", "Statistical Analysis", "Data Cleaning"] },
-    { category: "Web Development",             items: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "Python Flask", "FastAPI", "Laravel", "PHP"] },
+    { category: "Deep Learning & GenAI",       items: ["ANN", "RNN", "LSTM", "Transformers", "LLMs", "RAG", "AI Agents & Multi-Agent Systems", "MCP", "Embeddings", "Semantic Search", "Vector Search", "Prompt Engineering", "FAISS", "LLM Evaluation & Fine-tuning", "Langfuse", "Real-Time Voice (STT/TTS)", "Deepgram"] },
+    { category: "NLP & Data Analysis",         items: ["Sentiment Analysis", "Text Classification", "EDA", "Data Wrangling", "Statistical Analysis", "Data Cleaning", "Data Preprocessing"] },
+    { category: "Programming Languages",       items: ["Python", "TypeScript", "JavaScript", "Java", "C", "R", "PHP"] },
+    { category: "Web Development",             items: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "Node.js", "Tailwind CSS", "Python Flask", "FastAPI", "Laravel", "PHP"] },
     { category: "Databases",                   items: ["MySQL", "PostgreSQL", "SQLite", "MongoDB", "Redis", "Cassandra", "Neo4j"] },
-    { category: "DevOps & Big Data",           items: ["Docker", "Celery", "Apache Kafka", "Apache Spark", "Elasticsearch", "Kibana", "Linux", "GitHub", "WebRTC", "LiveKit"] },
-    { category: "Networks & Telecoms",         items: ["TCP/IP", "Static Routing", "OSPF", "RIP", "VLANs", "STP", "HSRP", "VoIP", "GSM", "UMTS", "4G-LTE"] }
+    { category: "DevOps & Big Data",           items: ["Docker", "Celery", "GitHub Actions (CI)", "pytest", "Playwright", "Render", "Vercel", "Apache Kafka", "Apache Spark", "Elasticsearch", "Kibana", "Linux", "GitHub", "WebRTC", "LiveKit"] },
+    { category: "Networks & Telecoms",         items: ["TCP/IP", "Static Routing", "OSPF", "RIP", "VLANs", "STP", "HSRP", "VRRP", "VoIP", "GSM", "UMTS", "4G-LTE"] },
+    { category: "Tools",                       items: ["Git / GitHub", "Jira", "Confluence", "VS Code", "Google Colab", "Cisco Packet Tracer", "Figma"] }
   ],
 
   education: [
@@ -326,6 +399,8 @@ const DATA = {
   ],
 
   certificates: [
+    { name: "ThirdUni Program — Applied AI (Cohort 1)",                    platform: "ThirdUni",                 date: "October 2026",  category: "AI / LLM",    img: "assets/img/certs/cert-thirduni.png" },
+    { name: "AI Agent Builder Bootcamp: Flowise, LangFlow, RAG & more!",    platform: "Udemy",                    date: "2026",          category: "AI / LLM",    img: "assets/img/certs/cert-ai-agent-builder.jpg" },
     { name: "Intro to AI Agents and Agentic AI",                           platform: "365 Data Science",         date: "November 2025", category: "AI / LLM",    img: "assets/img/certs/cert-ai-agents.jpg"       },
     { name: "Git and GitHub",                                               platform: "365 Data Science",         date: "November 2025", category: "Dev",          img: "assets/img/certs/cert-git-github.jpg"      },
     { name: "Artificial Neural Networks for Business Managers in R Studio", platform: "Udemy",                    date: "October 2024",  category: "AI / ML",     img: "assets/img/certs/cert-ann-rstudio.jpg"     },
@@ -340,7 +415,7 @@ const DATA = {
 
   languages: [
     { lang: "Arabic",  level: "Native", flag: "🇩🇿" },
-    { lang: "French",  level: "C2",     flag: "🇫🇷" },
+    { lang: "French",  level: "C1",     flag: "🇫🇷" },
     { lang: "English", level: "C1",     flag: "🇬🇧" },
     { lang: "Spanish", level: "B2",     flag: "🇪🇸" }
   ],

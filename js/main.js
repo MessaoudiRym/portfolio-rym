@@ -361,6 +361,8 @@ function initSkills() {
       'Databases':              { icon: 'fa-solid fa-database',        accent: 'gold'     },
       'DevOps & Big Data':      { icon: 'fa-solid fa-server',          accent: 'rose'     },
       'Networks & Telecoms':    { icon: 'fa-solid fa-network-wired',   accent: 'lavender' },
+      'Programming Languages':  { icon: 'fa-solid fa-terminal',        accent: 'gold'     },
+      'Tools':                  { icon: 'fa-solid fa-toolbox',         accent: 'gold'     },
     };
     grid.innerHTML = `<div class="skills-grid-cards">
       ${DATA.skills.map(cat => {
@@ -402,6 +404,7 @@ function initSkills() {
         'HP LIFE':                  { bg: 'linear-gradient(135deg,#00568e,#0096d6)', icon: 'fas fa-laptop'         },
         'Simplilearn SkillUp':      { bg: 'linear-gradient(135deg,#c44b00,#f8931d)', icon: 'fas fa-bolt'           },
         'Udemy':                    { bg: 'linear-gradient(135deg,#6c1ba8,#a435f0)', icon: 'fas fa-play-circle'    },
+        'ThirdUni':                 { bg: 'linear-gradient(135deg,#1a2a5e,#b22234)', icon: 'fas fa-university'     },
       };
       const catColor = {
         'AI / LLM':    'rose',
