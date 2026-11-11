@@ -27,7 +27,7 @@ const DATA = {
 
   about: {
     intro: "I am a Telecommunications Engineer specialised in Artificial Intelligence and Data Science, graduated from the National Higher School of Telecommunications and ICT - ENSTTIC (Oran, Algeria). What drives me is the art of transforming raw, messy data into systems that are truly intelligent — systems that understand language, reason about risk, and deliver value in the real world.",
-    body: "My journey bridges two worlds: the rigorous infrastructure of telecommunications engineering and the cutting edge of modern AI. I've deployed LLM agents for email automation, built real-time Twitter sentiment dashboards on Kafka & Spark, architected a AI-powered recruitment platform with voice interviews and intelligent CV screening, and developed medical inventory systems from the ground up.\n\nAt Belogic AI (Brussels), I worked at the intersection of LLMs, real-time voice technology, and large-scale async processing. In 2026 I joined Cohort 1 of the ThirdUni applied AI program, funded by the U.S. Department of State, where I built MedRadar. I am currently a Full-Stack Developer & Data Scientist at the Dr. C.F. BELARBI Medical Analysis Laboratory.",
+    body: "My journey bridges two worlds: the rigorous infrastructure of telecommunications engineering and the cutting edge of modern AI. I've deployed LLM agents for email automation, built real-time Twitter sentiment dashboards on Kafka & Spark, architected a AI-powered recruitment platform with voice interviews and intelligent CV screening, and developed medical inventory systems from the ground up.\n\nAt Belogic AI (Brussels), I worked at the intersection of LLMs, real-time voice technology, and large-scale async processing. In 2026 I joined Cohort 1 of the ThirdUni applied AI program, funded by the U.S. Department of State, where I built MedRadar.",
     values: [
       { icon: "✦", label: "Engineering Rigor", desc: "I build systems that are robust, scalable, and production-ready." },
       { icon: "✦", label: "End-to-End Ownership", desc: "From ideation to deployment, I own the full stack." }
@@ -63,21 +63,6 @@ const DATA = {
   ],
 
   experience: [
-    {
-      title:    "Full-Stack Developer & Data Scientist",
-      company:  "Dr. C.F. BELARBI Medical Analysis Laboratory",
-      location: "Oran, Algeria",
-      period:   "Oct 2026 – Present",
-      type:     "dev",
-      points: [
-        "Analysed business needs and existing processes to design a laboratory management solution",
-        "Performed functional analysis and contributed to the design of an integrated application for patients, medical analyses and billing",
-        "Explored, processed and structured medical and administrative data",
-        "Carried out statistical analyses and defined key performance indicators (KPIs)",
-        "Designed interactive dashboards and analytical reports for activity monitoring and decision-making"
-      ],
-      tags: ["Full-Stack", "Data Analysis", "KPIs", "Dashboards", "Statistics"]
-    },
     {
       title:    "Participant — ThirdUni Program (Cohort 1)",
       company:  "ThirdUni · Funded by the U.S. Department of State",
